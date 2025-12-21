@@ -1,215 +1,177 @@
 # 🚀 High-Performance AI Systems — From First Principles to Production
 
 **Architected by Rounak Saha**  
-*AI Engineer @ IDEMIA*
+*AI Engineer @ IDEMIA*  
+*Noida, India | CSE @ NIT Karnataka*
 
-
-::contentReference[oaicite:0]{index=0}
-
-
----
-
-## 🎯 What This Repository Is (and Is Not)
-
-This repository is **not** a tutorial.  
-It is **not** about calling APIs, chaining libraries, or showcasing toy demos.
-
-This repository documents **how real AI systems are built and operated in production**:
-- Systems that run **24×7**
-- Systems that handle **sensitive identity data**
-- Systems where **latency, throughput, and security are hard constraints**
-
-The focus is on **engineering reality**, not abstractions.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/rounak-saha-8b2963133/) [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Citations%2052-green)](https://scholar.google.com/citations?user=g-5SjTIAAAAJ&hl=en)
 
 ---
 
-## 🧠 Core Philosophy: Systems Thinking Over APIs
+## 🎯 What This Repository Is (and Isn't)
 
-Most AI repositories stop at *models*.  
-Real-world AI systems are **distributed, stateful, security-critical systems**.
+This is **not** a beginner tutorial, not about calling APIs, chaining libraries, or building toy demos.
 
-This repository follows one principle:
+This repository is a living documentation of **how real-world, production-grade AI systems are engineered and operated**:
+- Systems that run **24/7 with zero downtime tolerance**
+- Systems processing **sensitive identity and biometric data**
+- Systems where **millisecond latency, massive throughput, and ironclad security** are non-negotiable
 
-> **AI performance is a systems problem, not a model problem.**
-
-That means understanding:
-- How memory moves between CPU ↔ GPU
-- How Python interacts with C++ and CUDA
-- How async servers behave under load
-- How cryptography, networking, and scheduling affect inference latency
-
-**Models are only one component. Systems decide success or failure.**
+The emphasis is on **engineering realities** — the gritty details that separate prototypes from battle-tested deployments.
 
 ---
 
-## 🧱 Foundations First: Object-Oriented & Systems Design
+## 🧠 Core Philosophy: Systems Thinking Over Model Hype
 
+Most AI content stops at the model.  
+In production, **AI performance is a full systems problem**, not just a model problem.
 
-::contentReference[oaicite:1]{index=1}
+Success depends on mastering:
+- Data movement between CPU ↔ GPU (and the hidden costs)
+- Low-level interactions between Python, C++, and CUDA
+- Concurrency behavior under extreme load
+- How networking, scheduling, and cryptography impact end-to-end latency
 
+> **Models are just one piece. The surrounding system determines whether your AI succeeds or fails in the real world.**
 
-### 0. 🧩 Object-Oriented Design for AI Systems
+---
 
-**Why first?**  
-Because production AI is **long-lived software**, not notebooks.
+## 🧱 Foundations: Object-Oriented & Systems Design
 
-**Focus**
-- Designing extensible inference engines
-- Clean abstraction boundaries (Model, Engine, Runtime, IO)
-- Dependency inversion for hardware-agnostic code
-- Strategy & Factory patterns for model/runtime switching
+### 0. 🧩 Object-Oriented Design for Long-Lived AI Systems
+**Why start here?** Production AI is enduring software, not disposable notebooks.
 
-**The Nitty-Gritty**
+**Key Focus Areas**
+- Extensible inference engines with clean abstractions (Model | Engine | Runtime | IO)
+- Hardware-agnostic design via dependency inversion
+- Strategy & Factory patterns for seamless model/runtime switching
 - Composition over inheritance
-- Lifecycle management of heavy resources (GPU, memory, threads)
-- Designing AI systems that survive refactors, scaling, and audits
+- Lifecycle management for heavyweight resources (GPUs, memory pools, threads)
+- Designs that withstand refactors, scaling, and security audits
+
+**Status:** ✅ Complete & Documented
 
 ---
 
-## 🔥 The Engine Room: Compute & Memory
+## 🔥 The Engine Room: Compute & Memory Optimization
 
+### 1. 🔥 PyTorch — Demystifying the Silicon Execution
+Treating PyTorch as a **systems runtime**, not just a DL framework.
 
-::contentReference[oaicite:2]{index=2}
+**Key Topics**
+- Autograd graph construction, execution, and backward passes
+- CUDA streams, kernel launches, and synchronization pitfalls
+- Tensor memory layouts, strides, contiguity, and pinning
+- CPU-GPU transfer bottlenecks and implicit syncs
+- TorchScript vs. eager mode trade-offs
 
+**Status:** ✅ Active Development & Research
 
-### 1. 🔥 PyTorch — Beyond the Training Loop
+### 2. ⚙️ CuPy, Numba & Custom CUDA Kernels
+Escaping Python's GIL and overhead for peak performance.
 
-**Focus:** Understanding what actually runs on silicon  
-**Status:** ✅ Active Research
+**Key Topics**
+- Writing and optimizing custom CUDA kernels with CuPy
+- JIT compilation and performance tuning with Numba
+- LLVM IR inspection, register pressure, shared memory utilization
+- Occupancy analysis and when to bypass Python entirely
 
-**The Nitty-Gritty**
-- Autograd graph construction & backward execution
-- CUDA streams, kernel launches, and synchronization
-- Tensor memory layouts, strides, and contiguity
-- CPU–GPU transfer costs and hidden sync points
-- TorchScript vs eager execution trade-offs
-
-This section treats PyTorch as a **systems runtime**, not a DL library.
-
----
-
-### 2. ⚙️ CuPy, Numba & Custom CUDA
-
-**Focus:** Escaping Python overhead  
-**Status:** ✅ Active Research
-
-**The Nitty-Gritty**
-- Writing custom CUDA kernels with CuPy
-- JIT compilation via Numba
-- LLVM IR inspection
-- Register pressure, shared memory, and occupancy
-- When Python is acceptable — and when it must be bypassed
+**Status:** ✅ Active Development & Research
 
 ---
 
-## ⚡ Serving & Concurrency
+## ⚡ Serving & Concurrency at Scale
 
+### 3. ⚡ FastAPI — Building Asynchronous Inference Servers
+Engineering high-throughput, low-latency serving — beyond basic REST APIs.
 
-::contentReference[oaicite:3]{index=3}
+**Key Topics**
+- ASGI event loop deep dive
+- Worker models, concurrency limits, and isolation strategies
+- Async vs. thread/process pools for GPU-bound workloads
+- Dynamic batching, back-pressure handling, and overload protection
+- Preventing event loop blocking in production
 
-
-### 3. ⚡ FastAPI — Asynchronous Inference at Scale
-
-**Focus:** High-throughput, low-latency model serving  
 **Status:** 🚧 In Progress
 
-**The Nitty-Gritty**
-- ASGI event loop mechanics
-- Worker models and concurrency limits
-- Async vs thread pools vs process pools
-- Back-pressure, batching, and overload protection
-- Serving GPU-bound workloads without blocking
-
-This is about **engineering inference servers**, not REST APIs.
-
 ---
 
-## 🔐 Security Is Not Optional
-
-
-::contentReference[oaicite:4]{index=4}
-
+## 🔐 Security: Non-Negotiable in Sensitive Domains
 
 ### 4. 🔐 Cryptography & Secure AI Pipelines
+Protecting biometric/identity data and model IP in high-stakes environments.
 
-**Focus:** Protecting identity data and model assets  
+**Key Topics**
+- Envelope encryption (AES-GCM + RSA/ECDSA key wrapping)
+- Secure key management, rotation, and HSM integration
+- mTLS for inter-service communication
+- Model weight protection (at rest & in memory)
+- Performance-security trade-offs in real-time systems
+
 **Status:** 📅 Upcoming
 
-**The Nitty-Gritty**
-- Envelope encryption (AES-GCM + asymmetric keys)
-- Secure key storage & rotation
-- mTLS for internal service communication
-- Protecting model weights at rest and in memory
-- Security trade-offs in high-throughput AI systems
-
 ---
 
-## 🏎️ Hardware Acceleration & Graph Optimization
+## 🏎️ Hardware Acceleration & Inference Optimization
 
+### 5. 🏎️ TensorRT, ONNX & Runtime Optimizations
+Squeezing maximum performance for production deployment.
 
-::contentReference[oaicite:5]{index=5}
+**Key Topics**
+- Graph-level optimizations and operator fusion
+- INT8/FP16 quantization, calibration techniques
+- Custom TensorRT plugins for proprietary ops
+- Precision vs. latency/throughput trade-offs
+- Eliminating framework overhead entirely
 
-
-### 5. 🏎️ TensorRT, ONNX & Runtime Optimization
-
-**Focus:** Production-grade inference performance  
 **Status:** 📅 Upcoming
 
-**The Nitty-Gritty**
-- Graph optimization and operator fusion
-- INT8 quantization & calibration
-- Custom TensorRT plugins
-- Precision vs latency trade-offs
-- Removing framework overhead in production
-
 ---
 
-## 📊 Data at Scale (Without Pandas)
+## 📊 Data Pipelines at Scale (Beyond Pandas)
 
+### 6. 📊 Polars, Apache Arrow & Zero-Copy Processing
+High-throughput data handling for identity verification pipelines.
 
-::contentReference[oaicite:6]{index=6}
+**Key Topics**
+- Columnar formats and memory efficiency
+- Lazy evaluation and query optimization
+- SIMD vectorization for preprocessing
+- Zero-copy data exchange across processes/services
 
-
-### 6. 📊 Polars, Apache Arrow & Zero-Copy Data
-
-**Focus:** High-throughput data pipelines  
 **Status:** 📅 Upcoming
 
-**The Nitty-Gritty**
-- Columnar memory formats
-- Lazy execution & query planning
-- SIMD vectorization
-- Zero-copy IO between processes
-- Designing memory-efficient identity pipelines
+---
+
+## 📐 The Full Production Optimization Stack
+
+| Layer              | Technologies                  | Core Explorations                              |
+|---------------------------|-------------------------------|------------------------------------------------|
+| **Design**               | OOP Patterns                  | Lifecycle, abstractions, extensibility         |
+| **Compute**              | PyTorch / CUDA                | Autograd, kernels, memory management           |
+| **Acceleration**         | TensorRT / ONNX               | Fusion, quantization, custom plugins           |
+| **Serving**              | FastAPI / ASGI                | Concurrency, batching, throughput              |
+| **Data**                 | Polars / Apache Arrow         | Zero-copy, SIMD, lazy pipelines                |
+| **Security**             | Cryptography Primitives       | Encryption, key management, secure transport    |
 
 ---
 
-## 📐 The Production Optimization Stack
+## 👋 About the Author
 
-| Layer        | Technology        | What Is Explored Internally                  |
-|-------------|-------------------|----------------------------------------------|
-| Design       | OOP Patterns      | Lifecycle, abstraction, extensibility        |
-| Compute      | PyTorch / CUDA    | Autograd, kernels, memory                    |
-| Acceleration | TensorRT / ONNX   | Graph fusion & precision                     |
-| Serving      | FastAPI / ASGI    | Concurrency & throughput                     |
-| Data         | Polars / Arrow    | Zero-copy & SIMD                             |
-| Security     | Cryptography      | Encryption & secure transport                |
+I'm **Rounak Saha**, an **AI Engineer at IDEMIA** — a global leader in Payment and Connectivity Solutions
 
----
+**Background**
+- Masters in Computer Science & Engineering, NIT Karnataka
+- Research interests: Large Language Models, Multimodal AI, Trustworthy AI, MLOps, Generative AI
+- Google Scholar: 52 citations
 
-## 👋 About Me
+**Connect**
+- LinkedIn: [rounak-saha-8b2963133](https://www.linkedin.com/in/rounak-saha-8b2963133/)
+- Google Scholar: [Profile](https://scholar.google.com/citations?user=g-5SjTIAAAAJ&hl=en)
 
-I’m **Rounak Saha**, an **AI Engineer at IDEMIA**.
-
-I work on systems where:
-- Identity data is sensitive
-- Latency is measurable in milliseconds
-- Failures have real-world consequences
-
-**Current Focus:** Low-latency biometric inference  
-**Belief:**  
-> *Great AI systems are engineered — not assembled.*
+**Core Belief**  
+> *Great AI systems are meticulously engineered — not hastily assembled.*
 
 ---
 
-⭐ This repository reflects **how production AI actually works** — not how it is marketed.
+⭐ This repository captures **how production AI truly works** — raw, practical, and unfiltered. Contributions, discussions, and feedback welcome!
