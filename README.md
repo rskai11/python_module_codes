@@ -4,7 +4,7 @@
 *AI Engineer @ IDEMIA*  
 *Noida, India | CSE @ NIT Karnataka*
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/rounak-saha-8b2963133/) [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Citations%2052-green)](https://scholar.google.com/citations?user=g-5SjTIAAAAJ&hl=en)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/rounak-saha-8b2963133/) [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Reasearch%Profile-green)](https://scholar.google.com/citations?user=g-5SjTIAAAAJ&hl=en)
 
 ---
 
