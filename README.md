@@ -180,7 +180,7 @@ I'm **Rounak Saha**, an **AI Engineer at IDEMIA** — a global leader in Payment
 **Background**
 - Masters in Computer Science & Engineering, NIT Karnataka
 - Research interests: Large Language Models, Multimodal AI, Trustworthy AI, MLOps, Generative AI
-- Google Scholar: 52 citations
+- Google Scholar: 50+ citations
 
 **Connect**
 - LinkedIn: [rounak-saha-8b2963133](https://www.linkedin.com/in/rounak-saha-8b2963133/)
