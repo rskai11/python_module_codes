@@ -142,17 +142,34 @@ High-throughput data handling for identity verification pipelines.
 **Status:** 📅 Upcoming
 
 ---
+## 🤖 Agentic Systems: Multi-Agent Orchestration in Production
+
+### 7. 🤖 Building Production-Grade Agentic AI with CrewAI, Pydantic AI & AutoGen
+
+Moving beyond single-model inference to autonomous, collaborative multi-agent systems.
+
+**Key Topics**
+- CrewAI: Orchestrating role-based autonomous agents for complex workflows
+- Pydantic AI: Type-safe, production-focused agent development with structured outputs and tools
+- AutoGen (Microsoft): Multi-agent conversations, dynamic orchestration, and human-in-the-loop patterns
+- Production considerations: Reliability, observability, error handling, and scaling agentic workflows
+- Integrating agentic layers with low-latency inference backends
+
+**Status:** 📅 Upcoming
+
+---
 
 ## 📐 The Full Production Optimization Stack
 
-| Layer              | Technologies                  | Core Explorations                              |
-|---------------------------|-------------------------------|------------------------------------------------|
-| **Design**               | OOP Patterns                  | Lifecycle, abstractions, extensibility         |
-| **Compute**              | PyTorch / CUDA                | Autograd, kernels, memory management           |
-| **Acceleration**         | TensorRT / ONNX               | Fusion, quantization, custom plugins           |
-| **Serving**              | FastAPI / ASGI                | Concurrency, batching, throughput              |
-| **Data**                 | Polars / Apache Arrow         | Zero-copy, SIMD, lazy pipelines                |
-| **Security**             | Cryptography Primitives       | Encryption, key management, secure transport    |
+| Layer                        | Technologies                          | Core Explorations                              |
+|------------------------------|---------------------------------------|------------------------------------------------|
+| **Design**                   | OOP Patterns                          | Lifecycle, abstractions, extensibility         |
+| **Compute**                  | PyTorch / CUDA                        | Autograd, kernels, memory management           |
+| **Acceleration**             | TensorRT / ONNX                       | Fusion, quantization, custom plugins           |
+| **Serving**                  | FastAPI / ASGI                        | Concurrency, batching, throughput              |
+| **Data**                     | Polars / Apache Arrow                 | Zero-copy, SIMD, lazy pipelines                |
+| **Security**                 | Cryptography Primitives               | Encryption, key management, secure transport    |
+| **Agentic Orchestration**    | CrewAI / Pydantic AI / AutoGen        | Multi-agent workflows, autonomy, reliability   |
 
 ---
 
