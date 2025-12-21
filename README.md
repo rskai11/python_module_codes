@@ -4,7 +4,7 @@
 *AI Engineer @ IDEMIA*  
 *Noida, India | CSE @ NIT Karnataka*
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/rounak-saha-8b2963133/) [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Reasearch%Profile-green)](https://scholar.google.com/citations?user=g-5SjTIAAAAJ&hl=en)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/rounak-saha-8b2963133/) ![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Research%20Profile-green)](https://scholar.google.com/citations?user=g-5SjTIAAAAJ&hl=en)
 
 ---
 
@@ -158,12 +158,12 @@ High-throughput data handling for identity verification pipelines.
 
 ## 👋 About the Author
 
-I'm **Rounak Saha**, an **AI Engineer at IDEMIA** — a global leader in Payment and Connectivity Solutions
+I'm **Rounak Saha**, an **AI Engineer at IDEMIA** — a global leader in augmented identity and biometrics.
 
 **Background**
 - Masters in Computer Science & Engineering, NIT Karnataka
 - Research interests: Large Language Models, Multimodal AI, Trustworthy AI, MLOps, Generative AI
-- Google Scholar: 52 citations
+- Google Scholar: 50+ citations
 
 **Connect**
 - LinkedIn: [rounak-saha-8b2963133](https://www.linkedin.com/in/rounak-saha-8b2963133/)
